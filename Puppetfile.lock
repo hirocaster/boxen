@@ -1,7 +1,7 @@
 GIT
   remote: git@github.com:hirocaster/puppet-ruby.git
   ref: not-precompile
-  sha: 02cefb1d1670583a3750f7e29dd28844bc092b17
+  sha: d7aa1f1fbe334e4f2f151d275fb7088f5a4a8d2e
   specs:
     ruby (0.0.1)
 
