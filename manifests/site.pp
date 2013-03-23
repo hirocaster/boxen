@@ -56,7 +56,7 @@ node default {
   include nginx
   include nvm
 
-  # fail if FDE is not enabled
+  # # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
     fail('Please enable full disk encryption and try again')
   }
@@ -67,10 +67,15 @@ node default {
   include nodejs::0-8
 
   # default ruby versions
-  include ruby::1_8_7
-  include ruby::1_9_2
-  include ruby::1_9_3
-  include ruby::2_0_0
+  package {
+    [
+     'readline',
+     'openssl',
+     ]:
+  }
+  ruby::version { "1.9.3-p392":
+    conf_opts => '--with-readline-dir=/opt/boxen/homebrew/opt/readline --with-openssl-dir=/opt/boxen/homebrew/opt/openssl'
+  }
 
   # common, useful packages
   package {
