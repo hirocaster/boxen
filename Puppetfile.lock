@@ -1,7 +1,11 @@
 GIT
   remote: git@github.com:hirocaster/puppet-ruby.git
   ref: not-precompile
+<<<<<<< HEAD
   sha: d7aa1f1fbe334e4f2f151d275fb7088f5a4a8d2e
+=======
+  sha: c25704ad783ca70528cdba1c40376c024fe23385
+>>>>>>> Fix support multibyte by precompile
   specs:
     ruby (0.0.1)
 
@@ -46,16 +50,20 @@ GITHUBTARBALL
     nodejs (2.2.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-repository
+  remote: boxen/puppet-nvm
   specs:
-    repository (2.0.2)
+    nvm (1.0.0)
 
 GITHUBTARBALL
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   remote: boxen/puppet-ruby
+=======
+  remote: boxen/puppet-repository
+>>>>>>> Fix support multibyte by precompile
   specs:
-    ruby (4.1.0)
+    repository (2.0.2)
 
 GITHUBTARBALL
 >>>>>>> update puppetfile and readme to latest versions
@@ -90,8 +98,9 @@ DEPENDENCIES
 =======
   nginx (= 1.4.0)
   nodejs (= 2.2.0)
+  nvm (= 1.0.0)
   repository (= 2.0.2)
-  ruby (= 4.1.0)
+  ruby (>= 0)
   stdlib (= 4.0.2)
 >>>>>>> update puppetfile and readme to latest versions
   sudo (= 1.0.0)
