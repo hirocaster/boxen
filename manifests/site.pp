@@ -73,6 +73,9 @@ node default {
      'openssl',
      ]:
   }
+  ruby::version { "1.8.7-p371":
+    conf_opts => '--with-readline-dir=/opt/boxen/homebrew/opt/readline --with-openssl-dir=/opt/boxen/homebrew/opt/openssl'
+  }
   ruby::version { "1.9.3-p392":
     conf_opts => '--with-readline-dir=/opt/boxen/homebrew/opt/readline --with-openssl-dir=/opt/boxen/homebrew/opt/openssl'
   }
