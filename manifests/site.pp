@@ -79,6 +79,7 @@ node default {
   ruby::version { "1.9.3-p392":
     conf_opts => '--with-readline-dir=/opt/boxen/homebrew/opt/readline --with-openssl-dir=/opt/boxen/homebrew/opt/openssl'
   }
+  ruby::version { "2.0.0-p0": }
 
   # common, useful packages
   package {
