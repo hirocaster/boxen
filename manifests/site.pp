@@ -20,7 +20,7 @@ Exec {
 
   environment => [
     "HOMEBREW_CACHE=${homebrew::config::cachedir}",
-    "HOME=/Users/${::luser}"
+    "HOME=/Users/${::luser}",
   ]
 }
 
@@ -73,13 +73,22 @@ node default {
      'openssl',
      ]:
   }
-  ruby::version { "1.8.7-p371":
-    conf_opts => '--with-readline-dir=/opt/boxen/homebrew/opt/readline --with-openssl-dir=/opt/boxen/homebrew/opt/openssl'
-  }
-  ruby::version { "1.9.3-p392":
-    conf_opts => '--with-readline-dir=/opt/boxen/homebrew/opt/readline --with-openssl-dir=/opt/boxen/homebrew/opt/openssl'
-  }
-  ruby::version { "2.0.0-p0": }
+  # include ruby::1_8_7
+  include ruby::1_9_3
+  include ruby::2_0_0
+  # please, see https://gist.github.com/hirocaster/5698361
+
+  # $env = {
+  #   'CONFIGURE_OPTS' => '--with-readline-dir=/opt/boxen/homebrew/opt/readline --with-openssl-dir=/opt/boxen/homebrew/opt/openssl'
+  # }
+  # ruby::version { '1.9.3-p392':
+  #   env => $env
+  # }
+  # ruby::version { '2.0.0-p195':
+  #   env => {
+  #     'CONFIGURE_OPTS' => '--with-readline-dir=/opt/boxen/homebrew/opt/readline --with-openssl-dir=/opt/boxen/homebrew/opt/openssl'
+  #   }
+  # }
 
   # common, useful packages
   package {
