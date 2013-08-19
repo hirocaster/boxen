@@ -34,6 +34,9 @@ github "ruby",       "4.2.0"
 github "nvm",        "1.0.0"
 github "stdlib",     "4.0.2", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",       "1.0.0"
+# github "python",     "1.1.1"
+mod "python", :git => 'git@github.com:boxen/puppet-python.git', :ref => 'master'
+github "xquartz",    "1.1.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

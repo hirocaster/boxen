@@ -66,6 +66,12 @@ node default {
   include nodejs::v0_8
   include nodejs::v0_10
 
+  # python
+  include python
+  python::pip { 'pync':
+    virtualenv => '/opt/boxen/homebrew',
+  }
+
   # default ruby versions
   package {
     [
