@@ -1,3 +1,10 @@
+GIT
+  remote: git@github.com:boxen/puppet-python.git
+  ref: master
+  sha: 9749db037b4b02addb3fd7601c3f551a81f134c5
+  specs:
+    python (0.0.1)
+
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
@@ -59,6 +66,11 @@ GITHUBTARBALL
     sudo (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-xquartz
+  specs:
+    xquartz (1.1.0)
+
+GITHUBTARBALL
   remote: cprice-puppet/puppetlabs-inifile
   specs:
     inifile (0.9.0)
@@ -80,8 +92,10 @@ DEPENDENCIES
   nodejs (= 2.2.0)
   nvm (= 1.0.0)
   nvm (= 1.0.0)
+  python (>= 0)
   repository (= 2.0.2)
   ruby (= 4.2.0)
   stdlib (= 4.0.2)
   sudo (= 1.0.0)
+  xquartz (= 1.1.0)
 
